@@ -1,12 +1,13 @@
 const Koa = require('koa')
 const router = require('./router')
+const config = require('../config/default.js')
+const {server: {port}} = config
 
 
 const koa = new Koa()
 const serviceName = 'TestService'
-const port = 3333 
 
-const start = module.exports = async => {
+const start = async () =>  {
   try {
     koa.use(router().routes())
     const server = koa.listen(port)
