@@ -53,7 +53,7 @@ module.exports = async (startDate, endDate) =>  {
                 THEN [WeekID] % 52 
                 ELSE [WeekID]
                 END
-            ) as 'Неделя', 
+            ) as 'Week', 
             isnull([Monday],'') as 'Monday',  
             isnull([Tuesday],'') as 'Tuesday',  
             isnull([Wednesday],'') as 'Wednesday',  
@@ -70,7 +70,6 @@ module.exports = async (startDate, endDate) =>  {
         ORDER BY [WeekID]
 
         OPTION (MAXRECURSION 0)`
-        console.dir(result)
         return result
       } catch (error) {
         console.error(error)

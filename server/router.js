@@ -16,9 +16,8 @@ module.exports = () => {
 
   router.post('/calendar', async ctx => {
     const { body: { startDate, endDate } } = ctx.request
-    console.log(ctx.request.body)
     if (startDate && endDate) {
-      const cal = await getCalendarFromSql('2012-05-30', '2012-06-25')
+      const cal = await getCalendarFromSql(startDate, endDate)
       ctx.body = { response: cal.recordset} //тут вывести каледнарь
       ctx.status = 200
     } else {

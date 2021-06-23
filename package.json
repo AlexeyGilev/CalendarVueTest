@@ -6,17 +6,21 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "start": "node server/app.js"
+    "client": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "server": "node server/app.js",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "axios": "^0.21.1",
+    "element-ui": "^2.15.2",
     "koa": "2.13.1",
     "koa-bodyparser": "4.3.0",
     "koa-json": "2.0.2",
     "koa-router": "10.0.0",
     "mssql": "^7.1.3",
-    "vue": "^2.5.11"
+    "vue": "^2.5.11",
+    "vuejs-datepicker": "^1.6.2"
   },
   "browserslist": [
     "> 1%",

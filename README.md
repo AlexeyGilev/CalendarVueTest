@@ -5,22 +5,9 @@
 ## Запуск приложения
 0) Для запуска вам нужно установить node.js 
 1) Устанавливаем зависимости (командой npm install или yarn)
-2) Прописываем подключение к MS SQL серверу в конифге
-3) Запускаем сервис (командой npm run dev или yarn dev)
+2) Прописываем подключение к MS SQL серверу в конифге (файл config/default.js)
+3) Запускаем сервер (командой 'npm run server' или 'yarn server')
+4) Запускаем dev сервер вебпака для vue (командой' npm run client' или 'yarn client')
+5) После этого откроется вкладка браузера с приложением
 
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# run only koa service
-npm run start
-
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+В папке Example есть скриншоты 
